@@ -1,0 +1,21 @@
+{
+  "name": "patient-outcome-tracker",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Multi-tenant patient outcome tracker with microservices architecture",
+  "scripts": {
+    "install:all": "npm install && cd auth-service && npm install && cd ../outcome-service && npm install && cd ../api-gateway && npm install && cd ../frontend && npm install",
+    "seed": "node seed.js",
+    "start:auth": "cd auth-service && npm start",
+    "start:outcome": "cd outcome-service && npm start",
+    "start:gateway": "cd api-gateway && npm start",
+    "start:frontend": "cd frontend && npm start",
+    "dev:auth": "cd auth-service && npm run dev",
+    "dev:outcome": "cd outcome-service && npm run dev",
+    "dev:gateway": "cd api-gateway && npm run dev",
+    "dev:frontend": "cd frontend && npm start"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7"
+  }
+}
